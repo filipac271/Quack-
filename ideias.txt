@@ -1,0 +1,40 @@
+/* IDEIAS
+
+uma nave bar em cima
+_____________________________________
+
+Quack   Home    About   Carrinho/Loja
+
+___________________________________
+
+
+
+
+
+----Home 
+Imagens de patos para comprar 
+
+
+tipo:
+
+Pato 
+
+----nome do pato  -- preço
+--------------add to card
+
+
+
+
+------Carrinho
+
+--quantidade de produtos
+--preço de cada 
+--total de preços
+
+
+
+
+
+
+
+*/
