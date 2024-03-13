@@ -26,7 +26,7 @@ const Navbar = () => {
       <Image src={logo} alt ="Quack Logo" width={105} height={100} className='mb-2 ml-4 pb-0.5'></Image>
       </div>
       <div className=' hidden md:flex justify-between  pr-3 itens-center pt-4 w-1/4 gap-3'>
-        <Link className="text-lg hover:text-gray-600 shrink" href="/">Home</Link>
+        <Link className="text-lg hover:text-gray-600 shrink" href="/">Shop</Link>
         <Link className="text-lg  hover:text-gray-600 shrink" href="/about">About</Link>
         <Link className='pr-4 text-lg  hover:text-gray-600 shrink' href="/carrinho"> Carrinho</Link>
       </div>
