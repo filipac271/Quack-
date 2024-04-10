@@ -115,9 +115,9 @@ const useCartContext = (initCartState: CartStateType) => {
     return { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, cart }
 }
 
-export type useCartContextType = ReturnType<typeof useCartContext>
+export type UseCartContextType = ReturnType<typeof useCartContext>
 
-const initCartContextState: useCartContextType = {
+const initCartContextState: UseCartContextType = {
     dispatch: () => {},
     REDUCER_ACTIONS: REDUCER_ACTION_TYPE,
     totalItems: 0,
@@ -125,7 +125,7 @@ const initCartContextState: useCartContextType = {
     cart: [],
 }
 
-export const CartContext = createContext<useCartContextType>
+export const CartContext = createContext<UseCartContextType>
 (initCartContextState)
 
 type ChildrenType = { children?: ReactElement | ReactElement[]}
