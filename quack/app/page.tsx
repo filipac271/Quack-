@@ -58,10 +58,10 @@ import PatoVermelho from "@/Images/PatoVermelho.png"
 import patoLGBT from "@/Images/PatoLGBT.png"
 
 const tendencias = [
- { nome: "Pato Clássico Amarelo", preco: "5000€", imagem: PatoAmarelo },
- { nome: "Pato Clássico Laranja", preco: "5000€", imagem: PatoLaranja },
- { nome: "Pato Clássico Laranja", preco: "5000€", imagem: PatoLaranja },
- { nome: "Pato Clássico Laranja", preco: "5000€", imagem: PatoLaranja },
+ { nome: "Pato Homem de Ferro", preco: "15€", imagem: PatoHomemFerro },
+ { nome: "Pato Vaca", preco: "15€", imagem: PatoVaca },
+ { nome: "Pato Fotografo", preco: "15€", imagem: PatoFotografo },
+ { nome: "Pato Hulk", preco: "15€", imagem: PatoHulk },
 ];
 
 const classicos = [
@@ -125,21 +125,21 @@ const classicos = [
  const herois = [
   { nome: "Pato Batman", preco: "15€", imagem: PatoBatman },
   { nome: "Pato Batman Cinza", preco: "15€", imagem: PatoBatmanCinza },
-  { nome: "Pato Homem Ferro", preco: "15€", imagem: PatoHomemFerro },
+  { nome: "Pato Homem de Ferro", preco: "15€", imagem: PatoHomemFerro },
   { nome: "Pato Hulk", preco: "15€", imagem: PatoHulk },
   { nome: "Pato SpiderMan", preco: "15€", imagem: PatoSpiderMan },
   { nome: "Pato SuperHomem", preco: "15€", imagem: PatoSuperHomem },
  ]
 
-export default function Home() {
+ export default function Home() {
   return (
-     <main>
-       <div className="bg-gradient-to-r from-yellow-400 to-yellow-100 flex flex-row gap-x-60">
-         <Image className="ml-20 transform size-90" src={patoLGBT} alt="imagem"></Image>
-         <h1 className="text-black text-opacity-100 text-5xl mt-52 font-serif font-thin underline decoration-black decoration-1 underline-offset-8">Resolvemos todos os teus code-problems Quack</h1>
-       </div>
-       <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Tendências desta semana: </h1>
+      <main>
+        <div className="bg-gradient-to-r from-yellow-600 to-yellow-200 flex flex-row gap-x-60">
+          <Image className="transform size-100" src={patoLGBT} alt="imagem"></Image>
+          <h1 className="text-black text-opacity-100 text-5xl mt-52 font-serif font-thin underline decoration-black decoration-1 underline-offset-8">Resolvemos todos os teus code-problems Quack</h1>
+        </div>
+        <div>
+         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Tendecias: </h1>
          <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
            {tendencias.map((produto) => (
              <div key={produto.nome} className="hover:underline hover:font-semibold">
@@ -151,49 +151,53 @@ export default function Home() {
          </div>
        </div>
        <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Patos Clássicos: </h1>
-         <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
-           {classicos.map((produto) => (
-             <div key={produto.nome} className="hover:underline hover:font-semibold">
-               <Image className="hover:shadow-2xl ml-16" src={produto.imagem} alt={produto.nome} />
-               <h1 className="text-center font-mono text-xl">{produto.nome}</h1>
-               <h1 className="text-center font-mono text-xl">{produto.preco}</h1>
+        <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin">Patos Clássicos:</h1>
+        <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
+          {classicos.map((produto) => (
+             <div key={produto.nome} className="hover:font-semibold flex flex-col items-center group">
+               <Image className="hover:shadow-2xl" src={produto.imagem} alt={produto.nome} />
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.nome}</h1>
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.preco}</h1>
+               <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-white px-4 py-2 rounded invisible group-hover:visible">Adicionar ao carrinho</button>
+             </div>
+            ))}
+           </div>
+       </div>
+       <div>
+        <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Animais </h1>
+        <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
+          {animais.map((produto) => (
+             <div key={produto.nome} className="hover:font-semibold flex flex-col items-center group">
+               <Image className="hover:shadow-2xl" src={produto.imagem} alt={produto.nome} />
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.nome}</h1>
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.preco}</h1>
+               <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-white px-4 py-2 rounded invisible group-hover:visible">Adicionar ao carrinho</button>
              </div>
            ))}
          </div>
        </div>
        <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Animais: </h1>
-         <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
-           {animais.map((produto) => (
-             <div key={produto.nome} className="hover:underline hover:font-semibold">
-               <Image className="hover:shadow-2xl ml-16" src={produto.imagem} alt={produto.nome} />
-               <h1 className="text-center font-mono text-xl">{produto.nome}</h1>
-               <h1 className="text-center font-mono text-xl">{produto.preco}</h1>
+        <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Patos Trabalhadores </h1>
+        <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
+          {profissoes.map((produto) => (
+             <div key={produto.nome} className="hover:font-semibold flex flex-col items-center group">
+               <Image className="hover:shadow-2xl" src={produto.imagem} alt={produto.nome} />
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.nome}</h1>
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.preco}</h1>
+               <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-white px-4 py-2 rounded invisible group-hover:visible">Adicionar ao carrinho</button>
              </div>
            ))}
          </div>
        </div>
        <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Profissões </h1>
-         <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
-           {profissoes.map((produto) => (
-             <div key={produto.nome} className="hover:underline hover:font-semibold">
-               <Image className="hover:shadow-2xl ml-16" src={produto.imagem} alt={produto.nome} />
-               <h1 className="text-center font-mono text-xl">{produto.nome}</h1>
-               <h1 className="text-center font-mono text-xl">{produto.preco}</h1>
-             </div>
-           ))}
-         </div>
-       </div>
-       <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Super-Patos </h1>
-         <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
-           {herois.map((produto) => (
-             <div key={produto.nome} className="hover:underline hover:font-semibold">
-               <Image className="hover:shadow-2xl ml-16" src={produto.imagem} alt={produto.nome} />
-               <h1 className="text-center font-mono text-xl">{produto.nome}</h1>
-               <h1 className="text-center font-mono text-xl">{produto.preco}</h1>
+        <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Super-Patos </h1>
+        <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
+          {herois.map((produto) => (
+             <div key={produto.nome} className="hover:font-semibold flex flex-col items-center group">
+               <Image className="hover:shadow-2xl" src={produto.imagem} alt={produto.nome} />
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.nome}</h1>
+               <h1 className="group-hover:underline text-center font-mono text-xl">{produto.preco}</h1>
+               <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-white px-4 py-2 rounded invisible group-hover:visible">Adicionar ao carrinho</button>
              </div>
            ))}
          </div>
