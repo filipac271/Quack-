@@ -58,12 +58,12 @@ import PatoVermelho from "@/Images/PatoVermelho.png"
 
 
 const carrinhoL = [
-    { nome: "Pato Batman", preco: "15€", imagem: PatoBatman },
-    { nome: "Pato Batman Cinza", preco: "15€", imagem: PatoBatmanCinza },
-    { nome: "Pato Homem de Ferro", preco: "15€", imagem: PatoHomemFerro },
-    { nome: "Pato Hulk", preco: "15€", imagem: PatoHulk },
-    { nome: "Pato SpiderMan", preco: "15€", imagem: PatoSpiderMan },
-    { nome: "Pato SuperHomem", preco: "15€", imagem: PatoSuperHomem },
+    { nome: "Pato Batman", preco: 15, imagem: PatoBatman },
+    { nome: "Pato Batman Cinza", preco: 15, imagem: PatoBatmanCinza },
+    { nome: "Pato Homem de Ferro", preco: 15, imagem: PatoHomemFerro },
+    { nome: "Pato Hulk", preco: 15, imagem: PatoHulk },
+    { nome: "Pato SpiderMan", preco: 15, imagem: PatoSpiderMan },
+    { nome: "Pato SuperHomem", preco: 15, imagem: PatoSuperHomem },
    ]
   
 const tendencias = [

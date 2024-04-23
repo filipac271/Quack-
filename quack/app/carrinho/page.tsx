@@ -1,7 +1,18 @@
 import Image from "next/image";
 import { carrinhoL} from "@/app/components/ListaProdutos";
 
+
 const Carrinho = () => {
+  const calcularPrecoTotal = () => {
+    let total = 0;
+    carrinhoL.forEach((produto) => {
+      total += produto.preco;
+    });
+    return total;
+  };
+
+  // Chame a função para obter o preço total
+  const precoTotal = calcularPrecoTotal();
   return (
     <main>
       <div className="flex justify-center ml-10 mt-10 font-serif text-6xl">Carrinho</div>
@@ -36,7 +47,7 @@ const Carrinho = () => {
                <div>Custo Envio:</div>
              </div>
              <div>
-                <div className = "flex justify-end">90€</div>
+                <div className = "flex justify-end">{precoTotal}€</div>
                 <div className = "flex justify-end">0€</div>
               </div>
            </div>
@@ -44,8 +55,8 @@ const Carrinho = () => {
             <div>
                <div className = "font-medium">Total:</div>
              </div>
-             <div>
-                <div className = "font-medium flex justify-end">90€</div>
+              <div>
+                 <h1 className="flex items-center justify-end font-mono text-3xl">{precoTotal}€</h1>
               </div>
            </div>
            <div className="cursor-pointer hover:shadow-2xl hover:shadow-gray-600 mt-10 mb-10 mr-10 rounded-xl bg-yellow-600 font-semibold text-2xl font-mono text-white flex justify-center ">Checkout</div>
