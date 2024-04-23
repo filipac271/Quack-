@@ -60,7 +60,7 @@ import patoLGBT from "@/Images/PatoLGBT.png"
 const tendencias = [
  { nome: "Pato Homem de Ferro", preco: "15€", imagem: PatoHomemFerro },
  { nome: "Pato Vaca", preco: "15€", imagem: PatoVaca },
- { nome: "Pato Fotografo", preco: "15€", imagem: PatoFotografo },
+ { nome: "Pato Júlio", preco: "15€", imagem: PatoFotografo },
  { nome: "Pato Hulk", preco: "15€", imagem: PatoHulk },
 ];
 
@@ -112,7 +112,7 @@ const classicos = [
   { nome: "Pato Cirurgiao", preco: "15€", imagem: PatoCirurgiao },
   { nome: "Pato Enfermeira", preco: "15€", imagem: PatoEnfermeira },
   { nome: "Pato Engenheiro", preco: "15€", imagem: PatoEngenheiro },
-  { nome: "Pato Fotografo", preco: "15€", imagem: PatoFotografo },
+  { nome: "Pato Júlio", preco: "15€", imagem: PatoFotografo },
   { nome: "Pato Marinheiro", preco: "15€", imagem: PatoMarinheiro },
   { nome: "Pato Medica", preco: "15€", imagem: PatoMedica },
   { nome: "Pato Pintor", preco: "15€", imagem: PatoPintor },
@@ -134,12 +134,12 @@ const classicos = [
  export default function Home() {
   return (
       <main>
-        <div className="bg-gradient-to-r from-yellow-600 to-yellow-200 flex flex-row gap-x-60">
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-200 flex flex-row gap-x-60">
           <Image className="transform size-100" src={patoLGBT} alt="imagem"></Image>
           <h1 className="text-black text-opacity-100 text-5xl mt-52 font-serif font-thin underline decoration-black decoration-1 underline-offset-8">Resolvemos todos os teus code-problems Quack</h1>
         </div>
         <div>
-         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Tendecias: </h1>
+         <h1 className="mt-20 text-left ml-10 text-5xl font-serif font-thin margin"> Tendências: </h1>
          <div className="mt-10 mb-10 grid grid-cols-4 gap-4 justify-center">
            {tendencias.map((produto) => (
              <div key={produto.nome} className="hover:underline hover:font-semibold">
