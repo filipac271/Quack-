@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.fundopato{
+  background-image: url(/quack/Images/patosfundoabout.jpeg) ;
+  background-image: cover;
+}

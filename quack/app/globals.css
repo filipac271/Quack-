@@ -31,3 +31,8 @@ body {
 
   }
 }
+
+.fundopato{
+  background-image: url(/quack/Images/patosfundoabout.jpeg) ;
+  background-image: cover;
+}
