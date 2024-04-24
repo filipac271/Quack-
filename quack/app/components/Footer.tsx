@@ -11,9 +11,9 @@ import {FaLinkedin} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className=' max-w-7xl mx-auto  justify-between flex-col min-h-screen mt-auto flex insert-x-0 bottom-0'>
-			<div className=' bg-amber-100 flex flex-row mt-auto'>
-      <div className='flex-1 flex flex-end justify-between mt-auto'>
+    <footer className=' max-w-7xl justify-between flex-col max-h-screen mt-auto '>
+			<div className=' bg-amber-100 flex flex-row'>
+      <div className='flex-1 flex flex-end justify-between '>
       <div className=' '>
         <ul className='p-4'>
           <p className='text-gray-800 font-bold text-2xl pb-4'>Sobre Nós </p>
@@ -59,7 +59,7 @@ const Footer = () => {
 				</div>
         </div>
 
-        <div className="flex flex-row justify-center items-center text-center w-full p-3 bg-gray-50 align-content:flex-end;">
+        <div className="flex flex-row justify-center items-center text-center w-full p-3 bg-gray-50 align-content:flex-end">
 				<h1 className=" text-gray-800 font-semibold">
 					© 2023-2024 All rights reserved | Build with ❤ by{" "}
 					<span className="hover:text-blue-600 font-semibold cursor-pointer">
